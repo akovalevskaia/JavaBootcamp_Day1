@@ -35,6 +35,13 @@ public class Main {
         return !value;
     }
 
+    public static boolean getOnlyOneTrue(int x, int y) {
+        boolean st1 = x == y;
+        boolean st2 = x < 0 && y > 0;
+        boolean st3 = x > 100 && y > 100;
+        return st1 ^ st2 ^ st3;
+    }
+
     public static void main(String[] args) {
 
         //Task1: Ask user to input two numbers, compare them and output result
@@ -65,5 +72,13 @@ public class Main {
         System.out.println("Please, enter boolean value");
         boolean bl = sc.nextBoolean();
         System.out.println(getOppositeValue(bl));
+
+        //Task6: Write a program which asks the user to input two whole numbers a and b. Output "true", if one of this condition is true
+        System.out.println("Please, enter integer value");
+        int x = sc.nextInt();
+        System.out.println("Please, enter another one(integer value)");
+        int y = sc.nextInt();
+        System.out.println(getOnlyOneTrue(x, y));
+
     }
 }
